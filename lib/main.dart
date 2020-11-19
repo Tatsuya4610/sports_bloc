@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_first/blocs/bloc_provider.dart';
 import 'package:flutter_bloc_first/blocs/bloc_router.dart';
-import 'package:flutter_bloc_first/blocs/bloc_sport.dart';
-import 'package:flutter_bloc_first/screen/home_screen.dart';
 
 void main() {
   runApp(MyApp());
