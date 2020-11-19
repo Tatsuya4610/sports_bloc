@@ -7,7 +7,7 @@ class SportsDBApi {
   final _baseUrl = "https://www.thesportsdb.com/api/v1/json/1/";
   String _allSports() => _baseUrl + "all_sports.php";
   String _allLeagues(String name) => _baseUrl + 'search_all_leagues.php?s=' + name;
-  String allTeamFromLeague(String id) => _baseUrl + 'lookup_all_teams.php?id=' + id;
+  String _allTeamFromLeague(String id) => _baseUrl + 'lookup_all_teams.php?id=' + id;
 
   Future<List<dynamic>> request(String urlString, String key) async {
     final result = await http.get(urlString);
@@ -26,11 +26,8 @@ class SportsDBApi {
   }
 
   Future<List<Team>> fetchTeams(String id) async {
-    final List<dynamic> list = await request(allTeamFromLeague(id), "teams");
+    final List<dynamic> list = await request(_allTeamFromLeague(id), "teams");
     return list.map((json) => Team.fromJson(json)).toList();
   }
-
-
-
 
 }

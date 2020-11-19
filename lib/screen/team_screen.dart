@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_first/blocs/bloc_provider.dart';
+import 'package:flutter_bloc_first/blocs/bloc_router.dart';
 import 'package:flutter_bloc_first/blocs/bloc_teams.dart';
 import 'package:flutter_bloc_first/model/model_team.dart';
 import 'package:flutter_bloc_first/widgets/image_json.dart';
@@ -74,10 +75,21 @@ class TeamScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: Column(
                 children: <Widget>[
-                  TextAlternate(string: 'スタジアム',color: Colors.teal,size: 20,),
-                  TextAlternate(string: team.stadium.name,color: Colors.blue,),
-                  SizedBox(height: 5,),
-                  TextAlternate(string: team.stadium.stadiumDesc,),
+                  TextAlternate(
+                    string: 'スタジアム',
+                    color: Colors.teal,
+                    size: 20,
+                  ),
+                  TextAlternate(
+                    string: team.stadium.name,
+                    color: Colors.blue,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  TextAlternate(
+                    string: team.stadium.stadiumDesc,
+                  ),
                 ],
               ),
             ),
@@ -89,10 +101,12 @@ class TeamScreen extends StatelessWidget {
       ),
     );
   }
+
   List<Widget> fans() {
     List<Widget> w = [];
-    team.images.fanArt.images.forEach((url) => w.add(ImageJson(url: url,)));
+    team.images.fanArt.images.forEach((url) => w.add(ImageJson(
+          url: url,
+        )));
     return w;
   }
 }
-

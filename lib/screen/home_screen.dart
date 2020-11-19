@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
     final height = MediaQuery.of(context).size.height / 5;
     final bloc = BlocProvider.of<BlocSport>(context);
     return Scaffold(
-      appBar: MyAppBar(titleString: 'Flutter Bloc First!',),
+      appBar: MyAppBar(titleString: 'スポーツ情報',),
       body: Column(
         children: <Widget>[
           Image.asset('images/Sports.png',height: height,),
