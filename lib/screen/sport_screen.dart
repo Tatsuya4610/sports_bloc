@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_first/blocs/bloc_league.dart';
 import 'package:flutter_bloc_first/blocs/bloc_provider.dart';
 import 'package:flutter_bloc_first/model/model_sport.dart';
-import 'package:flutter_bloc_first/widgets/list_league.dart';
+import 'package:flutter_bloc_first/tile_list_widgets/list_league.dart';
 import 'package:flutter_bloc_first/widgets/my_appbar.dart';
 import 'package:flutter_bloc_first/widgets/no_data.dart';
 import 'package:flutter_bloc_first/model/model_league.dart';

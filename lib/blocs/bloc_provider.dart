@@ -3,13 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'bloc.dart';
 
 class BlocProvider <T extends Bloc> extends StatefulWidget {
-  final T bloc;
-  final Widget child;
+  final T bloc; //add.sinkの情報。
+  final Widget child; //ビルドするスクリーン。
 
   BlocProvider({this.bloc,this.child});
 
   static T of<T extends Bloc>(BuildContext context) {
-    final BlocProvider<T> _provider = context.findAncestorWidgetOfExactType<BlocProvider<T>>(); //Tに更新があった場合に検知し返す。
+    final BlocProvider<T> _provider = context.findAncestorWidgetOfExactType<BlocProvider<T>>(); //Tを受けとり時に検知し返す。
     return _provider.bloc;
   }
 
@@ -20,13 +20,13 @@ class BlocProvider <T extends Bloc> extends StatefulWidget {
 class _BloProviderState extends State<BlocProvider> {
   @override
   Widget build(BuildContext context) {
-    return widget.child;
+    return widget.child; //スクリーンのビルド。
   }
 
 
   @override
   void dispose() {
-    widget.bloc.dispose();
+    widget.bloc.dispose();//スクリーン更新後に受け取った情報を消去。リセット。
     super.dispose();
   }
 }

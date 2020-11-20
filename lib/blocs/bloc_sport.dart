@@ -10,15 +10,15 @@ class BlocSport extends Bloc {
   Stream<List<Sport>> get stream => _streamController.stream; //StreamBuilderのstreamに連結。
 
   fetchSports() async {
-    final sports = await SportsDBApi().fetchSports();
-    sink.add(sports);
+    final sports = await SportsDBApi().fetchSports(); //Apiのリスト化されたデーター
+    sink.add(sports); //これを流して、StreamBuilderのstreamで受け取るイメージ。
   }
 
-  BlocSport() {
+  BlocSport() { //呼び出す際に使用。
     fetchSports();
   }
 
 
   @override
-  dispose() => _streamController.close();
+  dispose() => _streamController.close();//デフォルトで覚える。
 }

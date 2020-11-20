@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_first/blocs/bloc_provider.dart';
-import 'package:flutter_bloc_first/blocs/bloc_router.dart';
-import 'package:flutter_bloc_first/blocs/bloc_teams.dart';
 import 'package:flutter_bloc_first/model/model_team.dart';
 import 'package:flutter_bloc_first/widgets/image_json.dart';
-import 'package:flutter_bloc_first/widgets/list_team.dart';
 import 'package:flutter_bloc_first/widgets/my_appbar.dart';
-import 'package:flutter_bloc_first/widgets/no_data.dart';
 import 'package:flutter_bloc_first/widgets/text_alternate.dart';
-import 'package:flutter_bloc_first/widgets/wait_screen.dart';
 
 class TeamScreen extends StatelessWidget {
   final Team team;

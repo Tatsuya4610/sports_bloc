@@ -15,9 +15,9 @@ class SportsDBApi {
     return body[key];
   }
 
-  Future<List<Sport>> fetchSports() async {
+  Future<List<Sport>> fetchSports() async { //fetchSportsで課程をコメント記入済み。
     final List<dynamic> list = await request(_allSports(), "sports");
-    return list.map((json) => Sport.fromJson(json)).toList();
+    return list.map((json) => Sport.fromJson(json)).toList();  //sportsのIDやnameや画像のリストデーター。
   }
 
   Future<List<League>> fetchLeagues(String name) async {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_first/model/model_league.dart';
-import 'package:flutter_bloc_first/widgets/tile_league.dart';
+import 'package:flutter_bloc_first/tile_list_widgets/tile_league.dart';
 
 class ListLeague extends StatelessWidget {
   final List<League> leagues;

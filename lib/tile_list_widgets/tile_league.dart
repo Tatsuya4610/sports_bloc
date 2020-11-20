@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_first/blocs/bloc_router.dart';
-import 'package:flutter_bloc_first/model/model_team.dart';
-import 'icon_widget.dart';
+import '../widgets/icon_widget.dart';
 import 'package:flutter_bloc_first/model/model_league.dart';
 
 class TileLeague extends StatelessWidget {

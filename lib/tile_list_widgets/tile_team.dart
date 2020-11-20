@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_first/model/model_team.dart';
-import 'package:flutter_bloc_first/screen/league_screen.dart';
 import 'package:flutter_bloc_first/screen/team_screen.dart';
 import 'package:flutter_bloc_first/widgets/icon_widget.dart';
 import 'package:flutter_bloc_first/widgets/text_alternate.dart';

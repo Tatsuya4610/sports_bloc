@@ -18,7 +18,7 @@ class BlocRouter {
   
   
   BlocProvider allSports() => BlocProvider<BlocSport>(
-        bloc: BlocSport(),
+        bloc: BlocSport(), //add.sinkで流した情報。BlocProviderでsinkに受け取り時にHomeScreenをビルド。BlocProviderで詳細。
         child: HomeScreen(),
       );
   BlocProvider sport(Sport sport) => BlocProvider<BlocLeague>(
